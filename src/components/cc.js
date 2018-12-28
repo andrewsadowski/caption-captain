@@ -27,10 +27,21 @@ const TitleText = styled.h1`
 
 export default class CC extends Component {
   render() {
+    const { hovering } = this.props
     return (
-      <TitleContainer>
-        <TitleText>CC</TitleText>
-      </TitleContainer>
+      <Spring
+        to={{
+          width: hovering ? '240px' : '120px',
+          height: hovering ? '240px' : '120px',
+          borderRadius: hovering ? '20px' : '60px',
+        }}
+      >
+        {styles => (
+          <TitleContainer style={{ ...styles }}>
+            <TitleText>CC</TitleText>
+          </TitleContainer>
+        )}
+      </Spring>
     )
   }
 }

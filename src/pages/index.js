@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { Spring } from 'react-spring'
 
 import Hover from '../components/hover'
 import CC from '../components/cc'
@@ -21,9 +22,8 @@ const CcContainer = styled.div`
 const IndexPage = () => (
   <>
     <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
-    <CcContainer>
-      <CC />
-    </CcContainer>
+    <Hover render={hovering => <CC hovering={hovering} />} />
+
     {/* <Link to="/page-2/">Go to page 2</Link> */}
   </>
 )
