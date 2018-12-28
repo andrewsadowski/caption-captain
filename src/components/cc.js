@@ -6,9 +6,9 @@ const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid black;
-  border-radius: 60px;
-  width: 120px;
-  height: 120px;
+  border-radius: 120px;
+  width: 240px;
+  height: 240px;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -31,14 +31,14 @@ export default class CC extends Component {
     return (
       <Spring
         to={{
-          width: hovering ? '240px' : '120px',
-          height: hovering ? '240px' : '120px',
-          borderRadius: hovering ? '20px' : '60px',
+          width: hovering ? '480px' : '240px',
+          height: hovering ? '480px' : '240px',
+          borderRadius: hovering ? '240px' : '120px',
         }}
       >
         {styles => (
           <TitleContainer style={{ ...styles }}>
-            <TitleText>CC</TitleText>
+            <TitleText>{hovering ? 'caption-captain' : 'CC'}</TitleText>
           </TitleContainer>
         )}
       </Spring>
