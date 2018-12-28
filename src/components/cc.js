@@ -4,17 +4,25 @@ import styled from 'styled-components'
 
 const TitleContainer = styled.div`
   display: flex;
+  flex-direction: column;
   border: 1px solid black;
-  border-radius: 30px;
+  border-radius: 60px;
   width: 120px;
   height: 120px;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `
 const TitleText = styled.h1`
-  font-family: 'Roboto'
-  justify-content: center;
-  font-size: 600;
+  font-family: 'Roboto';
+  text-align: center;
+  align-self: center;
+  margin: 0;
+  font-size: 900;
 `
 
 export default class CC extends Component {

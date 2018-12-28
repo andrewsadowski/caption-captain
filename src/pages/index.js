@@ -8,18 +8,22 @@ import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
 
-const ccContainer = styled.div`
-  display: flex;
+const CcContainer = styled.div`
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  /* position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 `
 
 const IndexPage = () => (
   <>
     <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
-    <ccContainer>
+    <CcContainer>
       <CC />
-    </ccContainer>
+    </CcContainer>
     {/* <Link to="/page-2/">Go to page 2</Link> */}
   </>
 )
