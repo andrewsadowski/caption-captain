@@ -43,7 +43,6 @@ export default class CC extends Component {
             <TitleText>
               {hovering ? <TitleCard hovering={hovering} /> : 'CC'}
             </TitleText>
-            <TitleCard />
           </TitleContainer>
         )}
       </Spring>
