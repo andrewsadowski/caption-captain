@@ -6,8 +6,37 @@ import Hover from './hover'
 
 export default class TitleCard extends Component {
   render() {
+    const { hovering } = this.props
     return (
-      <Transition
+      <Spring
+        native
+        from={{ opacity: 0, y: '-50px' }}
+        to={{ opacity: 1, y: '0px' }}
+      >
+        {styles => (
+          <Hover
+            render={hovering => (
+              <animated.p
+                hovering={hovering}
+                style={{
+                  transform: styles.y.interpolate(
+                    y => `translate3d(0, ${y}, 0)`
+                  ),
+                  ...styles,
+                }}
+              >
+                I'm The TitleCard!
+              </animated.p>
+            )}
+          />
+        )}
+      </Spring>
+    )
+  }
+}
+
+/**
+ *       <Transition
         native
         from={{ opacity: 0, y: '-50px' }}
         enter={{ opacity: 1, y: '0px' }}
@@ -32,6 +61,4 @@ export default class TitleCard extends Component {
             />
           ))}
       </Transition>
-    )
-  }
-}
+ */

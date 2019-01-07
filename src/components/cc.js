@@ -40,7 +40,9 @@ export default class CC extends Component {
       >
         {styles => (
           <TitleContainer style={{ ...styles }}>
-            <TitleText>{hovering ? 'hovering' : 'CC'}</TitleText>
+            <TitleText>
+              {hovering ? <TitleCard hovering={hovering} /> : 'CC'}
+            </TitleText>
             <TitleCard />
           </TitleContainer>
         )}
