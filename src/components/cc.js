@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react'
 import { Spring } from 'react-spring'
 import styled from 'styled-components'
 
+import TitleCard from './TitleCard'
+
 const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -38,7 +40,8 @@ export default class CC extends Component {
       >
         {styles => (
           <TitleContainer style={{ ...styles }}>
-            <TitleText>{hovering ? 'caption-captain' : 'CC'}</TitleText>
+            <TitleText>{hovering ? 'hovering' : 'CC'}</TitleText>
+            <TitleCard />
           </TitleContainer>
         )}
       </Spring>
