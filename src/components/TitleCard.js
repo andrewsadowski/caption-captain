@@ -4,6 +4,11 @@ import styled from 'styled-components'
 
 import Hover from './hover'
 
+const TitleText = styled(animated.div)`
+  font-family: 'Roboto';
+  background-color: green;
+`
+
 export default class TitleCard extends Component {
   render() {
     const { hovering } = this.props
@@ -16,7 +21,7 @@ export default class TitleCard extends Component {
         {styles => (
           <Hover
             render={hovering => (
-              <animated.p
+              <TitleText
                 hovering={hovering}
                 style={{
                   transform: styles.y.interpolate(
@@ -26,7 +31,7 @@ export default class TitleCard extends Component {
                 }}
               >
                 I'm The TitleCard!
-              </animated.p>
+              </TitleText>
             )}
           />
         )}
