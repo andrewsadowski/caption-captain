@@ -6,7 +6,7 @@ import Hover from './hover'
 
 const TitleText = styled(animated.div)`
   font-family: 'Roboto';
-  background-color: green;
+  /* background-color: green; */
 `
 
 export default class TitleCard extends Component {
@@ -30,7 +30,8 @@ export default class TitleCard extends Component {
                   ...styles,
                 }}
               >
-                I'm The TitleCard!
+                CC Blog <br />
+                Coming Soon!
               </TitleText>
             )}
           />
